@@ -1,14 +1,16 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const addButton = document.getElementById('addButton');
+    const toggleButton = document.getElementById('toggleButton');
     const itemList = document.getElementById('itemList');
 
-    addButton.addEventListener('click', () => {
-        // Create a new list item
-        const newItem = document.createElement('li');
-        newItem.textContent = `Item ${itemList.children.length + 1}`;
-
-        // Append the new item to the list
-        itemList.appendChild(newItem);
+    toggleButton.addEventListener('click', () => {
+        // Toggle the visibility of the list
+        if (itemList.classList.contains('hidden')) {
+            itemList.classList.remove('hidden');
+            toggleButton.textContent = '-'; // Change button text to "-"
+        } else {
+            itemList.classList.add('hidden');
+            toggleButton.textContent = '+'; // Change button text to "+"
+        }
     });
 });

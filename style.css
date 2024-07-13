@@ -12,7 +12,7 @@ body {
     text-align: center;
 }
 
-#addButton {
+#toggleButton {
     font-size: 24px;
     padding: 10px 15px;
     border: 2px solid #007BFF;
@@ -23,7 +23,7 @@ body {
     margin-bottom: 20px;
 }
 
-#addButton:hover {
+#toggleButton:hover {
     background-color: #0056b3;
     border-color: #0056b3;
 }
@@ -31,6 +31,7 @@ body {
 #itemList {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 #itemList li {
@@ -39,4 +40,8 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+
+.hidden {
+    display: none;
 }
